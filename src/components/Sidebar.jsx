@@ -30,11 +30,11 @@ export const Sidebar = () => {
   const navigate = useNavigate();
   const user = getUserFromCookie();
   const dispatch = useDispatch();
-  const [listHeight, setListHeight] = useState(window.innerHeight * 0.8);
+  const [listHeight, setListHeight] = useState(window.innerHeight * 0.7);
 
   useEffect(() => {
     const handleResize = () => {
-      setListHeight(window.innerHeight * 0.8);
+      setListHeight(window.innerHeight * 0.7);
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);

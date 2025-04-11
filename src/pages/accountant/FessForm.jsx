@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { addFeesService } from "../../service/SuperAdminService";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
@@ -14,6 +14,12 @@ export const FeesForm = () => {
   const [errors, setErrors] = useState({});
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (totalFees && installments) {
+      calculateInstallment(installments);
+    }
+  }, [totalFees, installments]);
 
   const validateForm = () => {
     let newErrors = {};
@@ -136,9 +142,9 @@ export const FeesForm = () => {
               value={totalFees}
               onChange={(e) => {
                 const value = e.target.value;
-                if (/^\d+$/.test(value) && value > 0) {
+                if (value === "" || (/^\d+$/.test(value) && value > 0)) {
                   setTotalFees(value);
-                  calculateInstallment(installments); // Ensure installments is a number
+                  calculateInstallment(installments);
                 }
               }}
             />

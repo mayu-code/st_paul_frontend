@@ -135,7 +135,7 @@ export const Import = () => {
         </div>
       </div>
       <div
-        className="flex flex-col  gap-5 justify-center items-center w-full h-full border-2 border-dashed border-gray-300 cursor-pointer bg-gray-100"
+        className="flex flex-col  gap-5 justify-center items-center w-full h-full border-2 border-dashed border-gray-300 cursor-pointer bg-white"
         onDragOver={handleDragOver}
         onDrop={handleDrop}
         onClick={handleClick}
