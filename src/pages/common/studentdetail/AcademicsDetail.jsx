@@ -50,10 +50,7 @@ export const AcademicsDetail = ({ detailData }) => {
       <table className="w-full border-collapse border border-gray-300 bg-white shadow-md">
         <tbody>
           {rows.map((row, rowIndex) => (
-            <tr
-              key={rowIndex}
-              className={rowIndex % 2 === 0 ? "bg-gray-100" : ""}
-            >
+            <tr key={rowIndex} className="bg-white">
               {row.map((item, index) => (
                 <React.Fragment key={index}>
                   <td className="border border-gray-300 p-3 font-semibold text-gray-700">

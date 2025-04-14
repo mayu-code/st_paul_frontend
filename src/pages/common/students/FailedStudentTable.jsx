@@ -185,8 +185,8 @@ export const FailedStudentTable = ({
 
           <div className="w-full overflow-hidden">
             <table className="w-full rounded-lg table-fixed">
-              <thead className="bg-gray-100 text-gray-700 uppercase text-xs md:text-sm">
-                <tr className="sticky top-0 bg-gray-100 shadow-sm">
+              <thead className="bg-white text-gray-700 uppercase text-xs md:text-sm">
+                <tr className="sticky top-0 bg-white shadow-sm">
                   {isPromotable && (
                     <th className="p-2 md:p-3 text-left min-w-[40px]">
                       Select
